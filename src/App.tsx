@@ -2,12 +2,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import { ThemeProvider } from './theme/ThemeProvider'
 import { Header } from './sections/Header'
+import { Hero } from './sections/Hero'
 
 function HomePage() {
   return (
     <>
       <Header />
       <div id="top" />
+      <Hero />
     </>
   )
 }
