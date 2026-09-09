@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+
+:root {
+  --pf-bg: #f3f5fe;
+  --pf-bg-2: #e9ecfa;
+  --pf-surface: #ffffff;
+  --pf-surface-2: #f7f8ff;
+  --pf-text: #232532;
+  --pf-muted: #595d6c;
+  --pf-border: #cfd3e5;
+  --pf-accent: #5d5294;
+  --pf-accent-soft: #796cbf;
+  --pf-accent-tint: rgba(121, 108, 191, 0.1);
+  --pf-glow: rgba(121, 108, 191, 0.3);
+  --pf-shadow:
+    0 1px 2px rgba(41, 43, 49, 0.06), 0 10px 30px rgba(41, 43, 49, 0.07);
+
+  --pf-hero-bg: linear-gradient(160deg, #eef0fc 0%, #f5f6ff 42%, #e9ebfa 100%);
+
+  --pf-about-decor-bg: linear-gradient(
+    160deg,
+    oklch(0.93 0.05 300),
+    oklch(0.95 0.035 240)
+  );
+  --pf-about-decor-border: oklch(0.84 0.05 292);
+  --pf-services-border: #e6e7f4;
+  --pf-services-rule: #ebecf6;
+  --pf-services-rule-strong: #cfd0e6;
+  --pf-services-heading: #171a27;
+  --pf-services-muted: #656a80;
+  --pf-services-accent: #6155d9;
+  --pf-services-accent-deep: #5348bd;
+  --pf-services-accent-soft: #eeecfb;
+  --pf-services-accent-mono: #8d86cf;
+  --pf-services-kicker: #7d76c4;
+  --pf-services-row-hover: #f6f5fe;
+  --pf-services-shadow:
+    0 1px 2px rgba(24, 26, 40, 0.04), 0 24px 48px -28px rgba(60, 55, 130, 0.18);
+  --pf-services-rule-gradient: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--pf-services-rule) 0%, transparent),
+    var(--pf-services-rule) 15%,
+    var(--pf-services-rule) 85%,
+    color-mix(in srgb, var(--pf-services-rule) 0%, transparent)
+  );
+  --pf-services-rule-strong-gradient: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--pf-services-rule-strong) 0%, transparent),
+    var(--pf-services-rule-strong) 15%,
+    var(--pf-services-rule-strong) 85%,
+    color-mix(in srgb, var(--pf-services-rule-strong) 0%, transparent)
+  );
+  --pf-experience-eyebrow: #9295ad;
+  --pf-experience-heading: #22232e;
+  --pf-experience-rail: #e0e2ee;
+  --pf-experience-dot-ring: #d6d8e6;
+  --pf-experience-dot-core: #e0e2ee;
+  --pf-experience-accent: #6d5bd0;
+  --pf-experience-accent-halo: rgba(109, 91, 208, 0.35);
+  --pf-experience-text-strong: #22232e;
+  --pf-experience-text-row: #4a4c60;
+  --pf-experience-text-mid: #55576a;
+  --pf-experience-text-muted: #6b6d80;
+  --pf-experience-text-faint: #8b8da3;
+  --pf-experience-text-mono-muted: #9295ad;
+  --pf-experience-divider: #d6d8e6;
+  --pf-code-bg: linear-gradient(165deg, #1d2033 0%, #171a2a 55%, #101220 100%);
+  --pf-code-border: #343953;
+  --pf-code-line: #2a2e44;
+  --pf-code-shadow:
+    0 34px 80px -30px rgba(10, 8, 32, 0.55), 0 0 0 1px rgba(196, 162, 255, 0.1);
+  --pf-contact-bg: oklch(0.98 0.005 277);
+  --pf-contact-panel: oklch(1 0 0);
+  --pf-contact-sunk: oklch(0.965 0.008 277);
+  --pf-contact-line: oklch(0.89 0.017 277);
+  --pf-contact-dim: oklch(0.53 0.02 277);
+  --pf-contact-blue: oklch(0.52 0.15 256);
+  --pf-contact-purple: oklch(0.49 0.17 305);
+  --pf-contact-green: oklch(0.53 0.14 152);
+  --pf-contact-hover: oklch(0.96 0.012 277);
+  --pf-contact-art-opacity: 0.3;
+  --pf-contact-art-blend: multiply;
+  --pf-contact-art-filter: none;
+}
+
+@theme inline {
+  --color-pf-bg: var(--pf-bg);
+  --color-pf-bg-2: var(--pf-bg-2);
+  --color-pf-surface: var(--pf-surface);
+  --color-pf-surface-2: var(--pf-surface-2);
+  --color-pf-text: var(--pf-text);
+  --color-pf-muted: var(--pf-muted);
+  --color-pf-border: var(--pf-border);
+  --color-pf-accent: var(--pf-accent);
+  --color-pf-accent-soft: var(--pf-accent-soft);
+  --color-pf-accent-tint: var(--pf-accent-tint);
+  --color-pf-glow: var(--pf-glow);
+  --color-pf-about-decor-border: var(--pf-about-decor-border);
+  --color-pf-code-border: var(--pf-code-border);
+  --color-pf-code-line: var(--pf-code-line);
+
+  --color-pf-services-border: var(--pf-services-border);
+  --color-pf-services-rule: var(--pf-services-rule);
+  --color-pf-services-rule-strong: var(--pf-services-rule-strong);
+  --color-pf-services-heading: var(--pf-services-heading);
+  --color-pf-services-muted: var(--pf-services-muted);
+  --color-pf-services-accent: var(--pf-services-accent);
+  --color-pf-services-accent-deep: var(--pf-services-accent-deep);
+  --color-pf-services-accent-soft: var(--pf-services-accent-soft);
+  --color-pf-services-accent-mono: var(--pf-services-accent-mono);
+  --color-pf-services-kicker: var(--pf-services-kicker);
+  --color-pf-services-row-hover: var(--pf-services-row-hover);
+
+  --color-pf-experience-eyebrow: var(--pf-experience-eyebrow);
+  --color-pf-experience-heading: var(--pf-experience-heading);
+  --color-pf-experience-rail: var(--pf-experience-rail);
+  --color-pf-experience-dot-ring: var(--pf-experience-dot-ring);
+  --color-pf-experience-dot-core: var(--pf-experience-dot-core);
+  --color-pf-experience-accent: var(--pf-experience-accent);
+  --color-pf-experience-text-strong: var(--pf-experience-text-strong);
+  --color-pf-experience-text-row: var(--pf-experience-text-row);
+  --color-pf-experience-text-mid: var(--pf-experience-text-mid);
+  --color-pf-experience-text-muted: var(--pf-experience-text-muted);
+  --color-pf-experience-text-faint: var(--pf-experience-text-faint);
+  --color-pf-experience-text-mono-muted: var(--pf-experience-text-mono-muted);
+  --color-pf-experience-divider: var(--pf-experience-divider);
+
+  --color-pf-contact-bg: var(--pf-contact-bg);
+  --color-pf-contact-panel: var(--pf-contact-panel);
+  --color-pf-contact-sunk: var(--pf-contact-sunk);
+  --color-pf-contact-line: var(--pf-contact-line);
+  --color-pf-contact-dim: var(--pf-contact-dim);
+  --color-pf-contact-blue: var(--pf-contact-blue);
+  --color-pf-contact-purple: var(--pf-contact-purple);
+  --color-pf-contact-green: var(--pf-contact-green);
+  --color-pf-contact-hover: var(--pf-contact-hover);
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --shadow-pf: var(--pf-shadow);
+  --shadow-pf-services: var(--pf-services-shadow);
+
+  --ease-pf: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--pf-bg);
+    color: var(--pf-text);
+    font-family: var(--font-sans);
+    transition: background 0.5s ease, color 0.5s ease;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--pf-accent);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--pf-accent-soft);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--pf-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--pf-accent-tint);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
