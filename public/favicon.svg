@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .ring-a { stroke: #5d5294; }
+    .ring-b { stroke: #796cbf; }
+    .dot { fill: #5d5294; }
+    @media (prefers-color-scheme: dark) {
+      .ring-a { stroke: #b5abfc; }
+      .ring-b { stroke: #9184d9; }
+      .dot { fill: #b5abfc; }
+    }
+  </style>
+  <ellipse class="ring-a" cx="24" cy="24" rx="17" ry="7.14" fill="none" stroke-width="2.4"/>
+  <ellipse class="ring-b" cx="24" cy="24" rx="17" ry="7.14" fill="none" stroke-width="2.4" opacity="0.75" transform="rotate(60 24 24)"/>
+  <circle class="dot" cx="24" cy="24" r="3.2"/>
+</svg>
