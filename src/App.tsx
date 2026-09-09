@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import { ThemeProvider } from './theme/ThemeProvider'
@@ -5,17 +6,21 @@ import { BackgroundDecor } from './sections/BackgroundDecor'
 import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
+import { Projects } from './sections/Projects'
 
 function HomePage() {
+  const [projectModalOpen, setProjectModalOpen] = useState(false)
+
   return (
     <>
       <BackgroundDecor />
-      <Header />
+      <Header hidden={projectModalOpen} />
       <div id="top" />
       <Hero />
 
       <main className="relative z-1 mx-auto max-w-325 px-10">
         <About />
+        <Projects onModalOpenChange={setProjectModalOpen} />
       </main>
     </>
   )
