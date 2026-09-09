@@ -10,6 +10,7 @@ import { Projects } from './sections/Projects'
 import { Stack } from './sections/Stack'
 import { Services } from './sections/Services'
 import { Experience } from './sections/Experience'
+import { Contact } from './sections/Contact'
 
 function HomePage() {
   const [projectModalOpen, setProjectModalOpen] = useState(false)
@@ -27,6 +28,7 @@ function HomePage() {
         <Stack />
         <Services />
         <Experience />
+        <Contact />
       </main>
     </>
   )
