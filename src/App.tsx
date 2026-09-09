@@ -11,6 +11,7 @@ import { Stack } from './sections/Stack'
 import { Services } from './sections/Services'
 import { Experience } from './sections/Experience'
 import { Contact } from './sections/Contact'
+import { Footer } from './sections/Footer'
 
 function HomePage() {
   const [projectModalOpen, setProjectModalOpen] = useState(false)
@@ -29,6 +30,7 @@ function HomePage() {
         <Services />
         <Experience />
         <Contact />
+        <Footer />
       </main>
     </>
   )
