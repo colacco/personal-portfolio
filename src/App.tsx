@@ -1,9 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './i18n/LanguageProvider'
 import { ThemeProvider } from './theme/ThemeProvider'
+import { Header } from './sections/Header'
 
 function HomePage() {
-  return <div id="top" />
+  return (
+    <>
+      <Header />
+      <div id="top" />
+    </>
+  )
 }
 
 function App() {
