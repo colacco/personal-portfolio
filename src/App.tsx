@@ -7,6 +7,7 @@ import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Projects } from './sections/Projects'
+import { Stack } from './sections/Stack'
 
 function HomePage() {
   const [projectModalOpen, setProjectModalOpen] = useState(false)
@@ -21,6 +22,7 @@ function HomePage() {
       <main className="relative z-1 mx-auto max-w-325 px-10">
         <About />
         <Projects onModalOpenChange={setProjectModalOpen} />
+        <Stack />
       </main>
     </>
   )
