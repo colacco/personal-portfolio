@@ -4,6 +4,7 @@ import { ThemeProvider } from './theme/ThemeProvider'
 import { BackgroundDecor } from './sections/BackgroundDecor'
 import { Header } from './sections/Header'
 import { Hero } from './sections/Hero'
+import { About } from './sections/About'
 
 function HomePage() {
   return (
@@ -12,6 +13,10 @@ function HomePage() {
       <Header />
       <div id="top" />
       <Hero />
+
+      <main className="relative z-1 mx-auto max-w-325 px-10">
+        <About />
+      </main>
     </>
   )
 }
